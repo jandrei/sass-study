@@ -1,6 +1,6 @@
-name: CI
+name: deploy site when tagged
 
-on: [push]
+on: [label]
 
 jobs:
   build:

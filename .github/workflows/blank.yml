@@ -1,6 +1,9 @@
-name: deploy site when tagged
+name: CD to /projeto
 
-on: [label]
+on:
+  push:
+    branches:
+    - release/*
 
 jobs:
   build:

@@ -16,4 +16,3 @@ jobs:
         FTP_SERVER: ${{ secrets.FTP_HOST }}
         FTP_USERNAME: ${{ secrets.FTP_USER }}
         REMOTE_DIR: projeto
-        LOCAL_DIR: ./projeto

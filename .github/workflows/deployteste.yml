@@ -1,7 +1,0 @@
-action "Deploy Live" {
-  uses = "sebastianpopp/git-ftp-action@master"
-  secrets = ["${secrets.FTP_USER}", "${secrets.FTP_PASSWORD}"]
-  env = {
-    FTP_DEST = "ftp://ftp.unaux.com/projeto/"
-  }
-}

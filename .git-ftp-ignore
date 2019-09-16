@@ -1,3 +1,8 @@
-!conexao.html
-!projeto
-!*.md
+.gitignore
+*/.gitignore      # ignore files in sub directories
+*/.gitkeep
+*/.projeto
+.git-ftp-ignore
+.git-ftp-include
+.gitlab-ci.yml
+.conexao.html

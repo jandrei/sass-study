@@ -48,6 +48,7 @@ if [[ -z "${ftp_password}" ]]; then
   exit 1;
 fi
 
+echo "Iniciando deploy em $ftp_host/$remote_dir"
 #descomente o #debug para debug para ver mais informacoes durante o upload
 lftp -c "
 #debug;
@@ -62,8 +63,21 @@ mirror --only-newer \
        --reverse \
        --parallel=5 \
        --verbose \
-       --exclude .git/ \
+       --exclude .git \
        --exclude deploy.sh \
+       --exclude error_log \
+       --exclude readme* \
+       --exclude pro \
+       --exclude security \
+       --exclude service \
+       --exclude LogPagSeguro \
+       --exclude cgi \
+       --exclude database \
+       --exclude devops \
+       --exclude manutencao \
        --exclude .gitignore \
        --exclude-glob composer.* \
-       --exclude-glob *.sh" || exit $?
+       --exclude-glob *.sh" || SAIDA=$?
+
+echo "Finalizando deploy em $ftp_host/$remote_dir"
+exit $SAIDA

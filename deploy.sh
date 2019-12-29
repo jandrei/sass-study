@@ -6,6 +6,10 @@
 #docker run local just for php without import database
 #docker run -d -p 8080:80 -p 8443:443 -p 8022:22 -v `pwd`/:/var/www/html -t otherdata/centos-docker-lamp:latestC
 
+#Como executar esse shell
+#env ftp_user=usuario ftp_password=senhaxyz ./deploy.sh hml
+#env ftp_user=usuario ftp_password=senhaxyz ./deploy.sh prd
+
 if [ $# -eq 0 ]; then
     echo "Informe hml para deploy em /projeto ou prd para deploy em /"
     exit 1

@@ -6,12 +6,6 @@
 #docker run local just for php without import database
 #docker run -d -p 8080:80 -p 8443:443 -p 8022:22 -v `pwd`/:/var/www/html -t otherdata/centos-docker-lamp:latestC
 
-#exclui diretorio git e arquivo sh do deploy e manda para o servidor
-#find .  ! -path '*/.git*' ! -path '*deploy*' -exec echo "jandrei-".{} \;
-
-#find . ! -path '*/.git/*' ! -path '*deploy*' -exec curl -v -u unaux_24986242:asdasdasdasdasdasqweqwe --ftp-create-dirs -T {} ftp://ftp.unaux.com/htdocs/{} \;
-
-
 if [ $# -eq 0 ]; then
     echo "Informe hml para deploy em /projeto ou prd para deploy em /"
     exit 1
